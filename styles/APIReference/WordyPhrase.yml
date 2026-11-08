@@ -1,0 +1,11 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: warning
+ignorecase: true
+swap:
+  'in order to': to
+  'prior to': before
+  'at this point in time': now
+  'in the event that': if
+  'utilizes': uses
+  'utilize': use
