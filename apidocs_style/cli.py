@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .checks import Issue, iter_documents, scan_file
+from .reporters import github
 from .rules import DEFAULT_FAIL_LEVEL, LEVELS, rank
 
 
@@ -23,7 +24,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("paths", nargs="+", metavar="PATH", help="file or directory to check")
     parser.add_argument(
-        "--format", choices=("text", "json"), default="text", help="report format"
+        "--format", choices=("text", "json", "github"), default="text", help="report format"
     )
     parser.add_argument(
         "--min-level", choices=LEVELS, default="suggestion", help="hide issues below this level"
@@ -74,7 +75,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     issues.sort(key=lambda issue: (issue.path, rank(issue.level), issue.line, issue.column))
 
     summary = summarize(issues)
-    if args.format == "json":
+    if args.format == "github":
+        print(github.render(issues))
+    elif args.format == "json":
         print(
             json.dumps(
                 {
