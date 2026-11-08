@@ -1,0 +1,7 @@
+extends: existence
+message: "Passive voice. Name the actor: the server returns, not is returned."
+level: suggestion
+ignorecase: true
+tokens:
+  - '\b(?:is|are|was|were|been|being)\s+\w+ed\b'
+  - '\b(?:is|are|was|were|been|being)\s+(?:built|done|given|made|sent|shown|taken|written)\b'
