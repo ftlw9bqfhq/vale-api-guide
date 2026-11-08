@@ -2,7 +2,8 @@
 
 Every rule here has a partner file in ``styles/APIReference`` so a page is
 reported the same way whether it is checked locally or by Vale in CI. Change
-both together: the rule id is the contract.
+both together: the rule id is the contract. The computed rules (sentence
+length, unclosed fence) have no Vale counterpart and run here only.
 """
 
 from __future__ import annotations
