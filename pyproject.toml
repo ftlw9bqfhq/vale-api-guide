@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apidocs-style"
+version = "0.1.0"
+description = "Lint API reference pages against a named style guide."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mei Chen" }]
+dependencies = []
+
+[project.scripts]
+apidocs-style = "apidocs_style.cli:main"
+
+[tool.setuptools]
+packages = ["apidocs_style"]
