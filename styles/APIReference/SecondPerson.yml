@@ -1,0 +1,6 @@
+extends: existence
+message: "Address the reader: use 'you' instead of 'users', 'clients', or 'developers'."
+level: suggestion
+ignorecase: false
+tokens:
+  - '\b(?:users?|clients?|developers?) (?:can|should|must|may)\b'
