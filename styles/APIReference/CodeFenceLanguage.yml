@@ -1,0 +1,7 @@
+extends: existence
+message: "Tag the fence with a language, for example json."
+level: error
+scope: raw
+nonword: true
+tokens:
+  - '(?m)^```[ \t]*$'
