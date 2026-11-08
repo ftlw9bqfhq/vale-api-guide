@@ -16,4 +16,4 @@ dependencies = []
 apidocs-style = "apidocs_style.cli:main"
 
 [tool.setuptools]
-packages = ["apidocs_style"]
+packages = ["apidocs_style", "apidocs_style.reporters"]
