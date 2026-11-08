@@ -106,6 +106,8 @@ Exit codes: `0` clean, `1` findings at or above `--fail-level`, `2` unreadable p
 
 The checker reads fenced code as opaque, ignores inline code and link targets,
 and skips YAML front matter, so it stays quiet where prose rules do not apply.
+Sentence length and unclosed-fence checks are computed, so they run here and
+have no Vale counterpart.
 
 ## Layout
 
