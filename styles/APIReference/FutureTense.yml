@@ -1,0 +1,10 @@
+extends: existence
+message: "Use the present tense for behavior that happens now."
+level: warning
+ignorecase: true
+tokens:
+  - 'will be returned'
+  - 'will be sent'
+  - 'will be created'
+  - 'will be updated'
+  - 'will return'
